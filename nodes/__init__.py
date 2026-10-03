@@ -1,0 +1,17 @@
+"""节点聚合入口。
+
+新增节点模块时，在这里 import 并把 mapping 合并进下面两个字典。
+"""
+
+from .lora_loader import NODE_CLASS_MAPPINGS as LORA_LOADER_CLASS_MAPPINGS
+from .lora_loader import NODE_DISPLAY_NAME_MAPPINGS as LORA_LOADER_DISPLAY_MAPPINGS
+
+NODE_CLASS_MAPPINGS = {
+    **LORA_LOADER_CLASS_MAPPINGS,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    **LORA_LOADER_DISPLAY_MAPPINGS,
+}
+
+__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
